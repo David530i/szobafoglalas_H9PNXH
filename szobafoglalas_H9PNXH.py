@@ -140,5 +140,6 @@ while True:
 
     elif option == 'x':
         break
+
     else:
         print("\nHibás választás! Csak a felsorolt menüpontok közül választhat!")
