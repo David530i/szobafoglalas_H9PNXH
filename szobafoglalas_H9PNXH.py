@@ -42,12 +42,10 @@ class Szalloda:
                 return
         for foglalas in self.foglalasok:
             if foglalas.szoba.szobaszam==szobaszam and foglalas.datum==datum:
-#               print("A szoba már foglalt  a megadott időpontban.")
                 return
         for szoba in self.szobak:
             if szoba.szobaszam==szobaszam:
                 self.foglalasok.append(Foglalas(szoba,datum))
-#                print(f"Sikeres foglalás! {szobaszam}, Ár: {szoba.szobaar} Ft")
                 return szoba.szobaar
         print("\nA megadott szobaszám nem létezik a szállodában.")
 
