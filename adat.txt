@@ -1,0 +1,4 @@
+név: Sándor Dávid
+szak: Mérnökinformatikus
+tagozat: Távoktatás
+neptunkód: H9PNXH
