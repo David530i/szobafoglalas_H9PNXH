@@ -1,6 +1,6 @@
 from datetime import datetime
 
-#       Hozz létre egy Szoba absztrakt osztályt, amely alapvető attribútumokat definiál (ár, szobaszám).
+#       Hozz létre egy Szoba absztrakt osztályt, amely alapvető attribútumokat definiál (ár, szobaszám)
 class Szoba:
     def __init__(self,szobaszam,szobaar):
         self.szobaszam=szobaszam
