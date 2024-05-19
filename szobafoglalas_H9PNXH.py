@@ -38,6 +38,10 @@ class Szalloda:
     def foglalas(self,szobaszam,datum):
         for foglalas in self.foglalasok:
             if foglalas.szoba.szobaszam==szobaszam and foglalas.datum==datum:
+                print("\nA szoba már foglalt ezen a napon. \nVálasszon másik szobát vagy másik dátumot!")
+                return
+        for foglalas in self.foglalasok:
+            if foglalas.szoba.szobaszam==szobaszam and foglalas.datum==datum:
 #               print("A szoba már foglalt  a megadott időpontban.")
                 return
         for szoba in self.szobak:
@@ -45,7 +49,7 @@ class Szalloda:
                 self.foglalasok.append(Foglalas(szoba,datum))
 #                print(f"Sikeres foglalás! {szobaszam}, Ár: {szoba.szobaar} Ft")
                 return szoba.szobaar
-#            print("\nA megadott szobaszám nem létezik a szállodában.")
+        print("\nA megadott szobaszám nem létezik a szállodában.")
 
 
 #       ● Implementálj egy metódust, ami lehetővé teszi a foglalás lemondását. (5 pont)
@@ -115,8 +119,8 @@ while True:
                 szobaar=szalloda.foglalas(szobaszam,datum)
                 if szobaar:
                     print(f"Sikeres foglalás! A szoba ára: {szobaar} Ft")
-                else:
-                    print("Az időpont és szoba már foglalt!")
+#                else:
+#                    print("Az időpont vagy szoba már foglalt!")
         except ValueError:
             print("Érvénytelen szobaszám vagy dátum")
 
